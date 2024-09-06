@@ -1,30 +1,44 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, Dimensions } from 'react-native'
 import React from 'react'
+import { Ionicons } from '@expo/vector-icons'
 
 const DocInfor = ({ item }) => {
-  if (!item) {
-    return <Text>Loading...</Text>
-  }
-
+  const {width}=Dimensions.get('window')
   return (
     <View>
-      {item.img ? (
-        <Image source={{ uri: item.img }} style={{ width: 200, height: 140 }} />
-      ) : (
-        <Text>Image not available</Text>
-      )}
-      {item.name ? (
-        <Text>{item.name}</Text>
-      ) : (
-        <Text>Name not available</Text>
-      )}
-      {item.title ? (
-        <Text>{item.title}</Text>
-      ) : (
-        <Text>Title not available</Text>
-      )}
+
+      <View className='relative' >
+      <Image source={{ uri: item?.img }} style={{ width: width, height: 230 }} />
+      <View className='flex-row justify-between absolute w-full p-4' >
+      <Ionicons size={34} color='blue' name="arrow-undo-circle-outline" />
+ <Ionicons name="heart" color='blue' size={34} />
+
+      </View  >
+
+      </View>
+      <View className='bg-gray-200 rounded-md px-3  ' style={{borderTopLeftRadius:12,borderTopRightRadius:14}} > 
+
+<Text className='font-bold my-2 text-xl'>{item?.name}</Text>
+<Text className='font-bold my-2 text-xl'>{item?.title}</Text>
+<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eum alias ut amet accusantium ex, possimus sunt quam ratione in perferendis quos repellat optio debitis! Laborum reprehenderit non reiciendis exercitationem.quam ratione in perferendis quos repellat optio debitis! Laborum reprehenderit non reiciendis exercitationem.</Text>
+</View>
+
     </View>
   )
 }
 
 export default DocInfor
+
+
+// {/* <View className="relative">
+// {/* Image */}
+// <Image source={{ uri: item?.img }} style={{ width: width, height: 230 }} />
+
+// {/* Icons positioned over the image */}
+// <View className="absolute flex-row justify-between w-full p-4">
+//   <Ionicons size={28} color='blue' name="arrow-undo-circle-outline" />
+//   <Ionicons name="heart" color='blue' size={28} />
+// </View>
+// </View>
+// <View className='bg-gray-200 rounded-md px-3  ' style={{borderTopLeftRadius:12,borderTopRightRadius:14}} > */}
+

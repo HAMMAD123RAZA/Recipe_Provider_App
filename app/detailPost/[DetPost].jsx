@@ -5,6 +5,7 @@ import { doc, getDoc } from '@firebase/firestore'
 import { db } from '../../firebase/Configs'
 import { render } from 'react-native-web'
 import DocInfor from '../../components/detailPost/DocInfor'
+import MenuIcons from '../../components/detailPost/Review'
 
 const DetPost = () => {
 const {DetPost}=useLocalSearchParams()
@@ -33,8 +34,9 @@ const getData=async()=>{
 
   return (
     <View>
-      <Text>{DetPost}</Text>
+      {/* <Text>{DetPost}</Text> */}
       <DocInfor item={data}  />
+      <MenuIcons item={data} />
     </View>
   )
 }

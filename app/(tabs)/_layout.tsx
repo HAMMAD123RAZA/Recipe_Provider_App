@@ -19,19 +19,31 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'home' : 'home-outline'} color={color} />
+            <Ionicons size={32} name={focused ? 'home' : 'home-outline'} color={Colors.primary} />
           ),
         }}
       />
+
+<Tabs.Screen
+        name="Profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons size={32} name='people' color={Colors.primary} />
+          ),
+        }}
+      />
+
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <Ionicons size={32} name='search' color={Colors.primary} />
           ),
         }}
       />
+
     </Tabs>
   );
 }
