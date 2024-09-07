@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 const Header = () => {
   return (
-    <View style={{backgroundColor:Colors.primary}} >
+    <View style={{backgroundColor:Colors.primary,borderBottomEndRadius:32,borderBottomLeftRadius:32}}  >
     <View className='flex-row gap-3 '  >
       <Image source={img} width={40} height={30}/>
       <View className='pt-5  ' >

@@ -1,6 +1,7 @@
 import { View, Text, Image, Dimensions } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
+import { Colors } from '../../constants/Colors'
 
 const DocInfor = ({ item }) => {
   const {width}=Dimensions.get('window')
@@ -10,8 +11,8 @@ const DocInfor = ({ item }) => {
       <View className='relative' >
       <Image source={{ uri: item?.img }} style={{ width: width, height: 230 }} />
       <View className='flex-row justify-between absolute w-full p-4' >
-      <Ionicons size={34} color='blue' name="arrow-undo-circle-outline" />
- <Ionicons name="heart" color='blue' size={34} />
+      <Ionicons size={34} color={Colors.primary} name="arrow-undo-circle-outline" />
+ <Ionicons name="heart" color={Colors.primary} size={34} />
 
       </View  >
 
