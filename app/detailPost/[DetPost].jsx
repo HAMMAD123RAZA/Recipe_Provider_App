@@ -21,7 +21,7 @@ const getData=async()=>{
         const infoSnap=await getDoc(info)
         if(infoSnap.exists()){
             const data=infoSnap.data()
-            console.log('infoData',data)
+            // console.log('infoData',data)
             setdata(data)
         }
         else{

@@ -4,7 +4,7 @@ import { Stack } from 'expo-router'
 import Header from '../../components/Header'
 import Slider from '../../components/Slider'
 import Category from '../../components/Category'
-
+import MealList from '../../components/MealList'
 
 const index = () => {
 
@@ -13,6 +13,7 @@ const index = () => {
       <Header/>
       <Slider/>
       <Category/>
+      <MealList/>
     </View>
   )
 }

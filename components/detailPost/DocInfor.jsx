@@ -19,7 +19,7 @@ const DocInfor = ({ item }) => {
       </View>
       <View className='bg-gray-200 rounded-md px-3  ' style={{borderTopLeftRadius:12,borderTopRightRadius:14}} > 
 
-<Text className='font-bold my-2 text-xl'>{item?.name}</Text>
+<Text className='font-bold my-2 text-xl'>{item?.category}</Text>
 <Text className='font-bold my-2 text-xl'>{item?.title}</Text>
 <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eum alias ut amet accusantium ex, possimus sunt quam ratione in perferendis quos repellat optio debitis! Laborum reprehenderit non reiciendis exercitationem.quam ratione in perferendis quos repellat optio debitis! Laborum reprehenderit non reiciendis exercitationem.</Text>
 </View>

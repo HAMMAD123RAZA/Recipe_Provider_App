@@ -23,13 +23,17 @@ useEffect(()=>{
       console.log(error)
     }
   }
+
 const router=useRouter()
 const renderItem=({item})=>{
+
     return (
       <TouchableOpacity onPress={()=>router.push('/detailPost/'+item?.id)} >
               <View className='w-40 m-2 py-2  bg-gray-200' style={{borderRadius:12}} >
         <Image source={{uri:item.img}} width={150} style={{borderRadius:7}} height={120} />
+        <Text  className='font-bold pl-3 pt-2 text-xl'>{item.title}</Text>
         <Text  className='font-bold pl-3 pt-2 text-xl'>{item.name}</Text>
+
         <Text className='font-bold text-gray-400 pl-3' >Lorem, ipsum dolor sit amet consectetur </Text>
 
         {/* <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dolorem amet libero vero, et repellendus quasi molestias ea, exercitationem, explicabo error quo suscipit maxime repellat iste illo? Suscipit, pariatur optio?</Text> */}

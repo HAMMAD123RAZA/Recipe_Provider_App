@@ -15,7 +15,7 @@ const CatId = () => {
 
     const getData=async()=>{
         try {
-            const q=query(collection(db,'mealsList'),where('name','==',CatId))
+            const q=query(collection(db,'mealsList'),where('category','==',CatId))
             const qSnapShot=await getDocs(q)
             const data = qSnapShot.docs.map((doc) =>({id:doc.id, ...doc.data()}));
             setelements(data)
@@ -31,9 +31,9 @@ const router=useRouter()
         return (
             <TouchableOpacity onPress={()=>router.push('/detailPost/'+item?.id)} >
             <Image source={{uri:item.img}} width={80} height={70} />
-            <Text>{item.name}</Text>
+            <Text>{item.category}</Text>
             <Text>{item.title}</Text>
-            </TouchableOpacity  >
+            </TouchableOpacity>
         )
     }
 
