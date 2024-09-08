@@ -10,8 +10,8 @@ const Header = () => {
     <View className='flex-row gap-3 '  >
       <Image source={img} width={40} height={30}/>
       <View className='pt-5  ' >
-      <Text className='' >Welcome</Text>
-      <Text>To Recipes</Text>
+      <Text className='text-white font-bold text-xl ' >Welcome</Text>
+      <Text className='text-white font-bold text-xl ' >To Recipes</Text>
       </View>
 
     </View>

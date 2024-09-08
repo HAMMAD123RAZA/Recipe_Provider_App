@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { collection, getDocs, query, where } from '@firebase/firestore'
 import {db} from '../../firebase/Configs'
+import CategoryCard from '../../components/CategoryCard'
 
 
 const CatId = () => {
@@ -29,11 +30,7 @@ const router=useRouter()
 
     const renderItem=({item})=>{
         return (
-            <TouchableOpacity onPress={()=>router.push('/detailPost/'+item?.id)} >
-            <Image source={{uri:item.img}} width={80} height={70} />
-            <Text>{item.category}</Text>
-            <Text>{item.title}</Text>
-            </TouchableOpacity>
+          <CategoryCard item={item} />
         )
     }
 

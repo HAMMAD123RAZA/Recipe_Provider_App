@@ -29,7 +29,7 @@ const Category = () => {
   
   const renderItem=({item})=>{
     return (
-        <View className='px-5' >
+        <View className='px-5 py-2' >
             <TouchableOpacity onPress={()=>router.push('/category/'+item.name)} >
         <Image source={{uri:item.img}} width={90} height={80}  />
         <Text className='px-2 pt-3' >{item.name}</Text>
@@ -40,8 +40,8 @@ const Category = () => {
 
 
   return (
-    <View>
-      <Text>Category</Text>
+    <View className='py-2'>
+       <Text className='py-1 text-2xl font-bold px-4 ' >Category</Text>
       <FlatList data={cat} horizontal showsHorizontalScrollIndicator={false} renderItem={renderItem} />
     </View>
   )

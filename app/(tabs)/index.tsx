@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router'
 import Header from '../../components/Header'
@@ -10,10 +10,14 @@ const index = () => {
 
   return (
     <View>
+      <ScrollView>
+
       <Header/>
       <Slider/>
       <Category/>
       <MealList/>
+       </ScrollView>
+
     </View>
   )
 }

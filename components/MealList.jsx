@@ -33,7 +33,7 @@ const MealList = () => {
 
   return (
     <View>
-      <Text className='font-bold text-xl'>MealList</Text>
+      <Text className=' py-1 px-4 text-2xl font-bold '>MealList</Text>
       <FlatList data={data} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false} />
     </View>
   )
