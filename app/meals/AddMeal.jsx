@@ -31,7 +31,6 @@ getCat()
         value: item.name,
     }));
     setcat(formatData);
-    // console.log(data);
 };
 
   const pickImage = async () => {
