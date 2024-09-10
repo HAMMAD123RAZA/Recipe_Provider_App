@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query } from '@firebase/firestore'
 import { db } from '../firebase/Configs'
 import MealsCard from './MealsCard'
+import { Colors } from '@/constants/Colors'
+import { Link } from 'expo-router'
 
 const MealList = () => {
     const [data, setdata] = useState()
@@ -33,7 +35,10 @@ const MealList = () => {
 
   return (
     <View>
-      <Text className=' py-1 px-4 text-2xl font-bold '>MealList</Text>
+      <View className="flex-row justify-between ">
+       <Text className='py-1 text-2xl font-bold px-4 ' style={{color:Colors.primary}} >Meals List</Text>
+    <Link href='/meals/MyMeal' className='py-1 text-2xl font-bold px-4 text-gray-400' >View All</Link> 
+       </View>
       <FlatList data={data} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false} />
     </View>
   )

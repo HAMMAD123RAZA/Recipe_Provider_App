@@ -1,17 +1,21 @@
-import { View, Text, Image, Dimensions } from 'react-native'
+import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { Colors } from '../../constants/Colors'
+import { useRouter } from 'expo-router'
 
 const DocInfor = ({ item }) => {
   const {width}=Dimensions.get('window')
+  const router=useRouter()
   return (
     <View>
 
       <View className='relative' >
       <Image source={{ uri: item?.img }} style={{ width: width, height: 230 }} />
       <View className='flex-row justify-between absolute w-full p-4' >
-      <Ionicons size={34} color={Colors.primary} name="arrow-undo-circle-outline" />
+        <TouchableOpacity onPress={()=>router.back(/category/)} >
+        <Ionicons size={34} color={Colors.primary} name="arrow-undo-circle-outline" />
+        </TouchableOpacity>
  <Ionicons name="heart" color={Colors.primary} size={34} />
 
       </View  >
@@ -42,4 +46,3 @@ export default DocInfor
 // </View>
 // </View>
 // <View className='bg-gray-200 rounded-md px-3  ' style={{borderTopLeftRadius:12,borderTopRightRadius:14}} > */}
-

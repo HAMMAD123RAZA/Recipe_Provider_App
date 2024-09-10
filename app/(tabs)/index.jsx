@@ -8,23 +8,24 @@ import Login from '../auth/Login';
 import { auth } from '@/firebase/Configs';
 import Registration from '../auth/Registration';
 
-const index = () => {
-  const [user, setUser] = useState(null);
+const Index = () => {
+  
+  // const [user, setUser] = useState(null)
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setUser(user)
+  //     } else {
+  //       setUser(null)
+  //     }
+  //   })
+  //   return () => unsubscribe()
+  // }, [])
 
-  if (!user) {
-    return <Login />;
-  }
+  // if (!user) {
+  //   return <Login />
+  // }
 
   return (
     <ScrollView>
@@ -38,4 +39,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

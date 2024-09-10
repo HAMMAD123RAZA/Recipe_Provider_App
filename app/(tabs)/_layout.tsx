@@ -18,6 +18,8 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
+          headerShown:false,
+
           tabBarIcon: ({ color, focused }) => (
             <Ionicons size={32} name={focused ? 'home' : 'home-outline'} color={Colors.primary} />
           ),
@@ -27,6 +29,8 @@ export default function TabLayout() {
 <Tabs.Screen
         name="Profile"
         options={{
+          headerShown:false,
+
           title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons size={32} name='people' color={Colors.primary} />
@@ -38,6 +42,7 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: 'Explore',
+          headerShown:false,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons size={32} name='search' color={Colors.primary} />
           ),

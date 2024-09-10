@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query } from '@firebase/firestore'
 import { db } from '@/firebase/Configs'
 import { useRouter } from 'expo-router'
+import { Colors } from '../../constants/Colors'
 
 const ExploreBusinessList = () => {
 
@@ -11,7 +12,6 @@ const ExploreBusinessList = () => {
 useEffect(()=>{
   getData()
 },[])
-
 
   const getData=async()=>{
     try {
@@ -28,8 +28,8 @@ const router=useRouter()
 const renderItem=({item})=>{
 
     return (
-      <TouchableOpacity onPress={()=>router.push('/detailPost/'+item?.id)} >
-              <View className='w-40 m-2 py-2  bg-gray-200' style={{borderRadius:12}} >
+      <TouchableOpacity className='' onPress={()=>router.push('/detailPost/'+item?.id)} >
+              <View className='w-40 m-2   bg-gray-200' style={{borderRadius:12}} >
         <Image source={{uri:item.img}} width={150} style={{borderRadius:7}} height={120} />
         <Text  className='font-bold pl-3 pt-2 text-xl'>{item.title}</Text>
         <Text  className='font-bold pl-3 pt-2 text-xl'>{item.name}</Text>
@@ -44,9 +44,10 @@ const renderItem=({item})=>{
 }
 
   return (
-    <View>
-      <Text>Meals List</Text>
+    <View className='' >
+      <Text className='  px-4 text-2xl font-bold ' style={{color:Colors.primary}} >MealList</Text>
       <FlatList data={data} renderItem={renderItem} contentContainerStyle={{justifyContent:'space-around'}} numColumns={2}  />
+
     </View>
   )
 }

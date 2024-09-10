@@ -6,7 +6,7 @@ import { Colors } from '@/constants/Colors'
 const ExploreScreen = () => {
   return (
     <View  >
-      <Text className='font-bold text-xl px-3 py-3' >Explore</Text>
+      <Text className='font-bold text-2xl px-3 py-3' style={{color:Colors.primary}}>Explore</Text>
       <View className='flex-row gap-2 px-5 py-3 m-4 rounded-lg  ' style={{borderColor:Colors.primary,borderWidth:2}} >
         <Ionicons name='search' size={26} color={Colors.primary}  />
         <TextInput

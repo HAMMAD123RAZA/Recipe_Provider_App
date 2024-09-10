@@ -35,7 +35,7 @@ const router=useRouter()
     }
 
   return (
-    <View>
+    <View className='my-5' >
       <FlatList renderItem={renderItem} data={elements}  />
     </View>
   )

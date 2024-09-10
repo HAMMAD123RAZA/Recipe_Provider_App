@@ -1,5 +1,6 @@
 import { View, Text, Image, FlatList } from 'react-native'
 import React from 'react'
+import { Colors } from '@/constants/Colors'
 
 const Slider = () => {
 
@@ -30,7 +31,7 @@ const Slider = () => {
 
   return (
     <View>
-      <Text className='py-3 text-2xl font-bold px-4 ' >Slider</Text>
+      <Text className='py-3 text-2xl font-bold px-4 ' style={{color:Colors.primary}} >Slider</Text>
       <FlatList data={data} horizontal  renderItem={renderItem} showsHorizontalScrollIndicator={false} />
     </View>
   )
