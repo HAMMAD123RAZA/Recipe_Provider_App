@@ -16,7 +16,7 @@ const UserInfo = () => {
   }, []);
 
   return (
-    <View className='my-20' style={{ marginLeft: 100 }}>
+    <View className='my-14' style={{ marginLeft: 100 }}>
       <Image
         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VQvuRo4SyQr1uhvdXwmgJYYX5pj7Yr_qcw&s' }}
         style={{ borderRadius: 112 ,marginLeft:11}}
@@ -25,7 +25,7 @@ const UserInfo = () => {
       <View className=' pt-2' >
 
       <Text className='pl-8 text-xl font-bold py-2' style={{color:Colors.primary}} >{userName}</Text>
-      <Text className='py-2 '  >{userEmail}</Text>
+      <Text className='py-2 pl-3 '>{userEmail}</Text>
     </View>
     </View>
 

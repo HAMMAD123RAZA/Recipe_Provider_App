@@ -80,16 +80,18 @@ getCat()
   };
 
   return (
-    <View>
+    <View className='py-8'>
     <View >
+    <Text className=' pt-4 pl-6 text-4xl font-bold ' style={{color:Colors.primary}} >Add Meals</Text>
+      <Text className='py-4 text-gray-400 pl-6 text-xl font-bold ' >Fill Out The Form To Add</Text>
     <TouchableOpacity onPress={pickImage} style={{marginHorizontal:24,marginVertical:3}} >
                 {!image ? (
                     <Image
-                        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNt_Ejt8G6IqgMiTDdlKYBGMfpX1aGwVxVw&s' }}
-                        style={{ width: 80, height: 60 ,borderRadius:12 }}
+                        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUsI1W4AWVg8cK7BaGldrCgq1ICAsaj9iWjw&s'  }}
+                        style={{ width: 90, height: 80 ,borderRadius:12 }}
                     />
                 ) : (
-                    <Image source={{ uri: image }} style={{ width: 80, height: 70 }} />
+                    <Image source={{ uri: image }} style={{ width: 80, height: 80 }} />
                 )}
             </TouchableOpacity>
 
