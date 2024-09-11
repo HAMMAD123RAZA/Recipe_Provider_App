@@ -33,16 +33,3 @@ const DocInfor = ({ item }) => {
 }
 
 export default DocInfor
-
-
-// {/* <View className="relative">
-// {/* Image */}
-// <Image source={{ uri: item?.img }} style={{ width: width, height: 230 }} />
-
-// {/* Icons positioned over the image */}
-// <View className="absolute flex-row justify-between w-full p-4">
-//   <Ionicons size={28} color='blue' name="arrow-undo-circle-outline" />
-//   <Ionicons name="heart" color='blue' size={28} />
-// </View>
-// </View>
-// <View className='bg-gray-200 rounded-md px-3  ' style={{borderTopLeftRadius:12,borderTopRightRadius:14}} > */}
