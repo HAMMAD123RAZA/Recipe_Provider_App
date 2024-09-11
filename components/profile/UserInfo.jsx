@@ -1,6 +1,7 @@
 import { View, Text, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import { auth } from '@/firebase/Configs';  // Make sure you have correct Firebase auth import
+import { auth } from '@/firebase/Configs';  
+import {Colors} from '../../constants/Colors'
 
 const UserInfo = () => {
   const [userName, setUserName] = useState('');
@@ -9,8 +10,8 @@ const UserInfo = () => {
   useEffect(() => {
     const user = auth.currentUser;
     if (user) {
-      setUserName(user.displayName || 'User Name');  // Use displayName or fallback
-      setUserEmail(user.email || 'user@example.com');  // Use email or fallback
+      setUserName(user.displayName || 'User Name');  
+      setUserEmail(user.email || 'user@example.com');  
     }
   }, []);
 
@@ -18,12 +19,16 @@ const UserInfo = () => {
     <View className='my-20' style={{ marginLeft: 100 }}>
       <Image
         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VQvuRo4SyQr1uhvdXwmgJYYX5pj7Yr_qcw&s' }}
-        style={{ borderRadius: 112 }}
-        width={110} height={110}
+        style={{ borderRadius: 112 ,marginLeft:11}}
+        width={120} height={120}
       />
-      <Text className='font-bold py-2'>{userName}</Text>
-      <Text className='py-2'>{userEmail}</Text>
+      <View className=' pt-2' >
+
+      <Text className='pl-8 text-xl font-bold py-2' style={{color:Colors.primary}} >{userName}</Text>
+      <Text className='py-2 '  >{userEmail}</Text>
     </View>
+    </View>
+
   );
 };
 

@@ -6,8 +6,8 @@ import { Colors } from '@/constants/Colors'
 const ExploreScreen = () => {
   return (
     <View  >
-      <Text className='font-bold text-2xl px-3 py-3' style={{color:Colors.primary}}>Explore</Text>
-      <View className='flex-row gap-2 px-5 py-3 m-4 rounded-lg  ' style={{borderColor:Colors.primary,borderWidth:2}} >
+      <Text className='font-bold text-4xl px-4 pt-9 pb-2' style={{color:Colors.primary}}>Explore</Text>
+      <View className='flex-row gap-2 px-5 py-3 m-4 rounded-xl ' style={{borderColor:Colors.primary,borderWidth:4}} >
         <Ionicons name='search' size={26} color={Colors.primary}  />
         <TextInput
             placeholder="Search..."

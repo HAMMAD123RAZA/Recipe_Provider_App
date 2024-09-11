@@ -45,7 +45,7 @@ const renderItem=({item})=>{
 
   return (
     <View className='' >
-      <Text className='  px-4 text-2xl font-bold ' style={{color:Colors.primary}} >MealList</Text>
+      <Text className=' py-4 px-4 text-4xl font-bold ' style={{color:Colors.primary}} >MealList</Text>
       <FlatList data={data} renderItem={renderItem} contentContainerStyle={{justifyContent:'space-around'}} numColumns={2}  />
 
     </View>
