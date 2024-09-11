@@ -30,7 +30,7 @@ const Slider = () => {
     }
 
   return (
-    <View>
+    <View className='py-2' >
       <Text className='py-3 text-2xl font-bold px-4 ' style={{color:Colors.primary}} >Slider</Text>
       <FlatList data={data} horizontal  renderItem={renderItem} showsHorizontalScrollIndicator={false} />
     </View>

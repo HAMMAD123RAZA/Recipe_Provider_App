@@ -32,15 +32,15 @@ const Category = () => {
         <View className='px-5 py-2 ' >
             <TouchableOpacity onPress={()=>router.push('/category/'+item.name)} >
         <Image style={{borderRadius:24}}  source={{uri:item.img}} width={90} height={80}  />
-        <Text className='px-2 pt-3' >{item.name}</Text>
+        <Text className='px-2 font-bold pt-3' style={{color:Colors.primary}} >{item.name}</Text>
         </TouchableOpacity>
         </View>
     )
 }
 
   return (
-    <View className='py-2'>
-      <View className="flex-row justify-between ">
+    <View className='py-4'>
+      <View className="flex-row justify-between py-2 ">
        <Text className='py-1 text-2xl font-bold px-4 ' style={{color:Colors.primary}} >Category</Text>
        <Text className='py-1 text-2xl font-bold px-4 text-gray-400'  >View All</Text>
        </View>
