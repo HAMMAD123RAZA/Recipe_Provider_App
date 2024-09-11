@@ -39,7 +39,7 @@ const Index = () => {
       </View>
     </ScrollView>
   ) : (
-    <Login />  // If no user is logged in, show the Login component
+    <Login /> 
   );
 };
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import {db} from '../../firebase/Configs'
 import { collection, getDocs, limit, query } from '@firebase/firestore'
 import MealsCard from '../../components/MealsCard'
+import { Colors } from '../../constants/Colors'
 const MyMeal = () => {
   const [data, setdata] = useState()
 
@@ -32,8 +33,8 @@ const MyMeal = () => {
   }
 
 return (
-  <View>
-    <Text className='font-bold text-xl'>MealList</Text>
+  <View className='py-7' >
+    <Text className='font-bold py-2 pl-6 text-4xl' style={{color:Colors.primary}} >MealList</Text>
     <FlatList data={data} renderItem={renderItem} />
   </View>
 )

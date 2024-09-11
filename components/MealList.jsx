@@ -34,7 +34,7 @@ const MealList = () => {
     }
 
   return (
-    <View>
+    <View className='pt-3'>
       <View className="flex-row justify-between ">
        <Text className='py-1 text-2xl font-bold px-4 ' style={{color:Colors.primary}} >Meals List</Text>
     <Link href='/meals/MyMeal' className='py-1 text-2xl font-bold px-4 text-gray-400' >View All</Link> 
