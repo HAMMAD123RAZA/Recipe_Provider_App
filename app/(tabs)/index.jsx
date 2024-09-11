@@ -1,41 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView, ActivityIndicator } from 'react-native';
+import { onAuthStateChanged } from 'firebase/auth';  // Import this from firebase/auth
+import { auth } from '@/firebase/Configs';
 import Header from '../../components/Header';
 import Slider from '../../components/Slider';
 import Category from '../../components/Category';
 import MealList from '../../components/MealList';
 import Login from '../auth/Login';
-import { auth } from '@/firebase/Configs';
-import Registration from '../auth/Registration';
-
+import { Colors } from '@/constants/Colors';
 const Index = () => {
-  
-  // const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);  // Track authenticated user
+  const [loading, setLoading] = useState(true);  // Track loading state
 
-  // useEffect(() => {
-  //   const unsubscribe = auth.onAuthStateChanged((user) => {
-  //     if (user) {
-  //       setUser(user)
-  //     } else {
-  //       setUser(null)
-  //     }
-  //   })
-  //   return () => unsubscribe()
-  // }, [])
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);  // User is logged in
+      } else {
+        setUser(null);  // No user is logged in
+      }
+      setLoading(false);  // Stop loading once we know auth state
+    });
 
-  // if (!user) {
-  //   return <Login />
-  // }
+    return () => unsubscribe();  // Cleanup on unmount
+  }, []);
 
-  return (
+  if (loading) {
+    return <ActivityIndicator size="large"  color={Colors.primary} />;  
+  }
+
+  return user ? (
     <ScrollView>
-    <View>
-      <Header />
-      <Slider />
-      <Category />
-      <MealList />
-    </View>
+      <View>
+        <Header />
+        <Slider />
+        <Category />
+        <MealList />
+      </View>
     </ScrollView>
+  ) : (
+    <Login />  // If no user is logged in, show the Login component
   );
 };
 
