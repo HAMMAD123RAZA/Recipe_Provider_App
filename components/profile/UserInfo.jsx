@@ -9,8 +9,8 @@ const UserInfo = () => {
   useEffect(() => {
     const user = auth.currentUser;
     if (user) {
-      setUserName(user.displayName || 'User Name');  // Use displayName or fallback
-      setUserEmail(user.email || 'user@example.com');  // Use email or fallback
+      setUserName(user.displayName || 'User Name')
+      setUserEmail(user.email || 'user@example.com');
     }
   }, []);
 
