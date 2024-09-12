@@ -28,11 +28,11 @@ const router=useRouter()
 const renderItem=({item})=>{
 
     return (
-      <TouchableOpacity className='' onPress={()=>router.push('/detailPost/'+item?.id)} >
-              <View className='w-40 m-2   bg-gray-200' style={{borderRadius:12}} >
-        <Image source={{uri:item.img}} width={150} style={{borderRadius:7}} height={120} />
-        <Text  className='font-bold pl-3 pt-2 text-xl'>{item.title}</Text>
-        <Text  className='font-bold pl-3 pt-2 text-xl'>{item.name}</Text>
+      <TouchableOpacity  className='' onPress={()=>router.push('/detailPost/'+item?.id)} >
+              <View className='w-40 m-2   bg-gray-200' style={{borderRadius:12,borderColor:Colors.primary,borderWidth:1}} >
+        <Image source={{uri:item.img}} width={150} style={{borderRadius:7,marginHorizontal:3,marginVertical:4}}  height={120} />
+        <Text  className='font-bold pl-3 pt-1 text-xl'>{item.title}</Text>
+        <Text  className='font-bold pl-3 pt-1 text-xl'>{item.name}</Text>
 
         <Text className='font-bold text-gray-400 pl-3' >Lorem, ipsum dolor sit amet consectetur </Text>
 

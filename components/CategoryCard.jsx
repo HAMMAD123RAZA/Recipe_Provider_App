@@ -2,15 +2,16 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
+import { Colors } from '../constants/Colors'
 
 const CategoryCard = ({item}) => {
     const router=useRouter()
   return (
-    <View className='rounded-lg bg-gray-200 m-4' >
+    <View className='rounded-lg bg-gray-200 m-4'  style={{borderColor:Colors.primary,borderWidth:2}} >
   <TouchableOpacity onPress={()=>router.push('/detailPost/'+item?.id)} >
     <View className='flex-row gap-4 p-2'  >
         <View>
-        <Image style={{borderRadius:12}} source={{uri:item.img}} width={120} height={130} />
+        <Image  style={{borderRadius:12,borderColor:Colors.primary,borderWidth:4}} source={{uri:item.img}} width={120} height={130} />
 
         </View>
         <View  className='flex-1 pl-4 ' >

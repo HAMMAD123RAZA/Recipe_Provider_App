@@ -30,8 +30,10 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors.light.tint,
+        tabBarActiveBackgroundColor:Colors.primary,
         headerShown: false,
+tabBarInactiveBackgroundColor:Colors.primary,
+
       }}>
       <Tabs.Screen
         name="index"
@@ -39,7 +41,7 @@ export default function TabLayout() {
           title: 'Home',
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-            <Ionicons size={32} name={focused ? 'home' : 'home-outline'} color={Colors.primary} />
+            <Ionicons size={32} name={focused ? 'home' : 'home-outline'} color='white'/>
           ),
         }}
       />
@@ -48,7 +50,7 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: () => (
-            <Ionicons size={32} name='people' color={Colors.primary} />
+            <Ionicons size={32} name='people' color='white'/>
           ),
         }}
       />
@@ -57,7 +59,7 @@ export default function TabLayout() {
         options={{
           title: 'Explore',
           tabBarIcon: () => (
-            <Ionicons size={32} name='search' color={Colors.primary} />
+            <Ionicons size={32} name='search' color='white'/>
           ),
         }}
       />

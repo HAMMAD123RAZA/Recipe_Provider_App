@@ -29,7 +29,7 @@ const Category = () => {
   
   const renderItem=({item})=>{
     return (
-        <View className='px-5 py-2 ' >
+        <View className='px-5 py-2 '  >
             <TouchableOpacity onPress={()=>router.push('/category/'+item.name)} >
         <Image style={{borderRadius:24}}  source={{uri:item.img}} width={90} height={80}  />
         <Text className='px-2 font-bold pt-3' style={{color:Colors.primary}} >{item.name}</Text>

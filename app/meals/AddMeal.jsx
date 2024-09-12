@@ -87,7 +87,7 @@ getCat()
     <TouchableOpacity onPress={pickImage} style={{marginHorizontal:24,marginVertical:3}} >
                 {!image ? (
                     <Image
-                        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUsI1W4AWVg8cK7BaGldrCgq1ICAsaj9iWjw&s'  }}
+                        source={{ uri: 'https://i.pinimg.com/originals/41/d3/ff/41d3ffd56e5d6968a393ece81b20f428.jpg'  }}
                         style={{ width: 90, height: 80 ,borderRadius:12 }}
                     />
                 ) : (
@@ -95,11 +95,11 @@ getCat()
                 )}
             </TouchableOpacity>
 
-<View className='p-5 m-5 border-2 border-[#6b6a10] rounded-lg ' >
+<View className='p-5 m-5  border-[#6b6a10] rounded-lg '  style={{borderWidth:3}}>
 <TextInput value={title} onChangeText={settitle} placeholder='Title' />
 
 </View>
-<View className='p-5 m-5 border-2 border-[#6b6a10] rounded-lg ' >
+<View className='p-5 m-5  border-[#6b6a10] rounded-lg '  style={{borderWidth:3}}>
 <TextInput multiline numberOfLines={4} style={{textAlignVertical:'top'}} value={description} onChangeText={setdescription} placeholder='Description' />
 
 </View>

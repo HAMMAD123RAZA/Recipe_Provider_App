@@ -9,12 +9,12 @@ const MealsCard = ({item}) => {
     const router=useRouter()
 
   return (
-    <TouchableOpacity  onPress={()=>router.push('/detailPost/'+item.id)} className="bg-gray-200 p-3 m-4 w-72 mb-4 rounded-lg">
+    <TouchableOpacity style={{borderColor:Colors.primary,borderWidth:1}}  onPress={()=>router.push('/detailPost/'+item.id)} className="bg-gray-200 p-3 m-4 w-72 mb-4 rounded-lg">
       <View className="flex-row gap-3">
         <Image
           source={{ uri: item.img }}
           className="rounded-lg"
-          style={{ width: 100, height: 130 }}
+          style={{ width: 100, height: 130,borderColor:Colors.primary,borderWidth:3 }}
         />
         <View className="flex-1">
           <Text className="pt-1 font-semibold text-lg">{item.title}</Text>

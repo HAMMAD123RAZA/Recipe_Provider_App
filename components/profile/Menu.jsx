@@ -11,13 +11,13 @@ const Menu = () => {
     {
       id: 1,
       name: 'Add Meals',
-      img: 'https://cdn-icons-png.flaticon.com/128/10008/10008895.png',
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ZuIGtp0bOGm_w5D1gsoDHB6b9PPs0ClqkA&s',
       path: '/meals/AddMeal',
     },
     {
       id: 2,
       name: 'My Meals',
-      img: 'https://cdn-icons-png.flaticon.com/128/2918/2918221.png',
+      img: 'https://icones.pro/wp-content/uploads/2021/04/icone-de-nourriture-grise-symbole-png.png',
       path: '/meals/MyMeal',
     },
     {
@@ -68,9 +68,10 @@ const Menu = () => {
         >
           <Image
             source={{ uri: item.img }}
+            style={{width:100}}
             className="w-20 h-20 mb-2 rounded-lg"
           />
-          <Text className="text-center text-base font-medium">{item.name}</Text>
+          <Text className="text-center text-base font-bold" style={{color:Colors.primary}} >{item.name}</Text>
         </TouchableOpacity>
       </View>
     )

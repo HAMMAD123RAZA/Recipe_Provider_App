@@ -19,13 +19,13 @@ const UserInfo = () => {
     <View className='my-14' style={{ marginLeft: 100 }}>
       <Image
         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VQvuRo4SyQr1uhvdXwmgJYYX5pj7Yr_qcw&s' }}
-        style={{ borderRadius: 112 ,marginLeft:11}}
+        style={{ borderRadius: 112 ,marginLeft:22}}
         width={120} height={120}
       />
       <View className=' pt-2' >
 
       <Text className='pl-8 text-xl font-bold py-2' style={{color:Colors.primary}} >{userName}</Text>
-      <Text className='py-2 pl-3 '>{userEmail}</Text>
+      <Text className='py-2 pl-3 font-bold ' style={{color:Colors.primary}}>{userEmail}</Text>
     </View>
     </View>
 

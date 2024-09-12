@@ -29,21 +29,24 @@ const Register = () => {
   };
 
   return (
-    <View className='mx-10 my-40'>
-      <TextInput
-        className='p-3 m-5 border-2 border-[#6b6a10] rounded-lg'
+    <View>
+    <Text className=' pt-14 pl-14 text-4xl font-bold ' style={{color:Colors.primary}} >YOUR RECIPE</Text>
+
+    <View className='mx-10 my-4'>
+    <TextInput
+        className='p-3 m-5 border-4 border-[#6b6a10] rounded-lg'
         placeholder="Name"
         value={name}
         onChangeText={setName}
       />
       <TextInput
-        className='p-3 m-5 border-2 border-[#6b6a10] rounded-lg'
+        className='p-3 m-5 border-4 border-[#6b6a10] rounded-lg'
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
       />
       <TextInput
-        className='p-3 m-5 border-2 border-[#6b6a10] rounded-lg'
+        className='p-3 m-5 border-4 border-[#6b6a10] rounded-lg'
         placeholder="Password"
         value={password}
         onChangeText={setPassword}
@@ -67,6 +70,7 @@ const Register = () => {
           Register
         </Text>
       </TouchableOpacity>
+      </View>
     </View>
   );
 };
