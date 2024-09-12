@@ -19,7 +19,7 @@ const UserInfo = () => {
     <View className='my-14' style={{ marginLeft: 100 }}>
       <Image
         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VQvuRo4SyQr1uhvdXwmgJYYX5pj7Yr_qcw&s' }}
-        style={{ borderRadius: 112 ,marginLeft:22}}
+        style={{ borderRadius: 112 ,marginLeft:17}}
         width={120} height={120}
       />
       <View className=' pt-2' >

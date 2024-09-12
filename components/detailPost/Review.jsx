@@ -6,7 +6,7 @@ import {Colors} from '../../constants/Colors'
 const Review = ({item}) => {
   return (
     <View>
-      <Text>Review</Text>
+      <Text className='font-bold text-2xl px-4 pt-3' style={{color:Colors.primary}}  >Review</Text>
       <Rating
   type='star'
   ratingCount={5}
@@ -14,18 +14,16 @@ const Review = ({item}) => {
   onFinishRating={this.ratingCompleted}
 />
 
-<View className='px-5 py-3 rounded-lg mx-7 my-3 bg-white  ' >
-<TextInput placeholder='Review us here...' />
+<View className='px-4 py-3 rounded-lg mx-4 my-3 bg-white  ' >
+<TextInput style={{textAlignVertical:'top'}} numberOfLines={5} multiline placeholder='Review us here...' />
 </View>
 
 {/* btn */}
 
 <TouchableOpacity
-                // disabled={!userInput.trim()} 
                 style={{
-                    // backgroundColor: !userInput.trim() ? Colors.primary : Colors.triple,
                     backgroundColor:Colors.primary,
-                    padding: 12,
+                    padding: 17,
                     marginHorizontal: 9,
                     borderRadius: 5,
                     alignItems: 'center',
@@ -33,7 +31,6 @@ const Review = ({item}) => {
             >
                 <Text style={{ color: 'white' }}>Submit</Text>
 </TouchableOpacity>
-
 
     </View>
   )

@@ -26,7 +26,11 @@ const Index = () => {
   }, []);
 
   if (loading) {
-    return <ActivityIndicator size="large"  color={Colors.primary} />;  
+    return (    
+      <View className='my-20' >
+<ActivityIndicator size={100}   color={Colors.primary} />
+      </View>
+    )
   }
 
   return user ? (

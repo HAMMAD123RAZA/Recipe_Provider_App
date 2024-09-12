@@ -8,6 +8,7 @@ import {db, storage} from '../../firebase/Configs'
 import { collection, doc, getDocs, query, setDoc } from 'firebase/firestore';
 import {Colors} from '../../constants/Colors'
 import { getDownloadURL, ref, uploadBytes } from '@firebase/storage';
+import {  useRouter } from 'expo-router';
 
 
 const AddMeal = () => {
@@ -20,6 +21,8 @@ const AddMeal = () => {
 useEffect(()=>{
 getCat()
 },[])
+
+const  router=useRouter()
 
   const getCat = async () => {
     const q = query(collection(db, 'category'));
@@ -59,6 +62,7 @@ getCat()
       const downimgUrl=await getDownloadURL(imgRef)
       console.log(downimgUrl)
       bussDetail(downimgUrl)
+      router.push('/meals/MyMeal')
     } catch (error) {
       console.log(error)
     }

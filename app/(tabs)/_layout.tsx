@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/firebase/Configs';
 import Login from '../auth/Login';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
 export default function TabLayout() {
   const [user, setUser] = useState(null);
@@ -19,12 +19,16 @@ export default function TabLayout() {
     return () => unsubscribe();
   }, []);
 
-  if (loading) {
-    return <ActivityIndicator size="large"  color={Colors.primary} />;  
+  if (loading) {    
+    return  (
+<View className='my-20' >
+      <ActivityIndicator size={80}  color={Colors.primary} />
+      </View>
+    )
   }
 
   if (!user) {
-    return <Login />;  // If the user is not authenticated, show Login
+    return <Login />;  
   }
 
   return (

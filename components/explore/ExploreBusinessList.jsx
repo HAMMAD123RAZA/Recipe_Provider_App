@@ -1,4 +1,4 @@
-import { View, Text, FlatList ,Image, TouchableOpacity} from 'react-native'
+import { View, Text, FlatList ,Image, TouchableOpacity, ActivityIndicator} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query } from '@firebase/firestore'
 import { db } from '@/firebase/Configs'
@@ -24,6 +24,8 @@ useEffect(()=>{
     }
   }
 
+
+
 const router=useRouter()
 const renderItem=({item})=>{
 
@@ -36,7 +38,6 @@ const renderItem=({item})=>{
 
         <Text className='font-bold text-gray-400 pl-3' >Lorem, ipsum dolor sit amet consectetur </Text>
 
-        {/* <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dolorem amet libero vero, et repellendus quasi molestias ea, exercitationem, explicabo error quo suscipit maxime repellat iste illo? Suscipit, pariatur optio?</Text> */}
 
         </View>
         </TouchableOpacity>
