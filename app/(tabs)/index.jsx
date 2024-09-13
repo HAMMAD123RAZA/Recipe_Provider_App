@@ -8,6 +8,7 @@ import Category from '../../components/Category';
 import MealList from '../../components/MealList';
 import Login from '../auth/Login';
 import { Colors } from '@/constants/Colors';
+import Register from '../auth/Registration';
 const Index = () => {
   const [user, setUser] = useState(null);  // Track authenticated user
   const [loading, setLoading] = useState(true);  // Track loading state
@@ -24,11 +25,11 @@ const Index = () => {
 
     return () => unsubscribe();  // Cleanup on unmount
   }, []);
-
+  
   if (loading) {
     return (    
       <View className='my-20' >
-<ActivityIndicator size={100}   color={Colors.primary} />
+<ActivityIndicator size={40}   color={Colors.primary} />
       </View>
     )
   }
@@ -43,7 +44,7 @@ const Index = () => {
       </View>
     </ScrollView>
   ) : (
-    <Login /> 
+    <Register /> 
   );
 };
 

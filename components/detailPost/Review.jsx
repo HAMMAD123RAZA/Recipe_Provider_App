@@ -6,7 +6,7 @@ import {Colors} from '../../constants/Colors'
 const Review = ({item}) => {
   return (
     <View>
-      <Text className='font-bold text-2xl px-4 pt-3' style={{color:Colors.primary}}  >Review</Text>
+      <Text className='font-bold text-2xl px-4 py-3-' style={{color:Colors.primary}}  >Review</Text>
       <Rating
   type='star'
   ratingCount={5}

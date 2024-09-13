@@ -14,6 +14,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      router.replace('/')
     } catch (err) {
       setError(err.message);
     }
@@ -25,9 +26,8 @@ const Login = () => {
       <Image  source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOZMkQV4Mb6VMHqIknnZdvriMOBetKD-a_w&s'}} borderRadius={100}  width={200} height={190}/>
 
       </View>
-            <Text className=' pt-4 mx-24 text-4xl font-bold ' style={{color:'white'}} >Welcome!</Text>
+            {/* <Text className=' pt-4 text-center text-4xl font-bold ' style={{color:'white'}} >Login Now</Text> */}
             <Text className=' pt-4 text-center text-3xl font-bold ' style={{color:'white'}} >Explore Recipes</Text>
-
 
     <View className='mx-10 my-4'>
       <TextInput placeholderTextColor='white' className='p-3 m-4  border-4 border-white rounded-lg' placeholder="Email" value={email} onChangeText={setEmail} />

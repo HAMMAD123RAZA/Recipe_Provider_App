@@ -86,6 +86,7 @@ const Menu = () => {
         contentContainerStyle={{ paddingHorizontal: 8 }}
         renderItem={renderItem}
       />
+      
     </View>
   )
 }

@@ -6,6 +6,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/firebase/Configs';
 import Login from '../auth/Login';
 import { ActivityIndicator, View } from 'react-native';
+import Register from '../auth/Registration'
 
 export default function TabLayout() {
   const [user, setUser] = useState(null);
@@ -22,13 +23,13 @@ export default function TabLayout() {
   if (loading) {    
     return  (
 <View className='my-20' >
-      <ActivityIndicator size={80}  color={Colors.primary} />
+      <ActivityIndicator size={40}  color={Colors.primary} />
       </View>
     )
   }
 
   if (!user) {
-    return <Login />;  
+    return <Register />;  
   }
 
   return (

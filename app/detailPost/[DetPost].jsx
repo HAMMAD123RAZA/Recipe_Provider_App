@@ -6,6 +6,7 @@ import { db } from '../../firebase/Configs'
 import { render } from 'react-native-web'
 import DocInfor from '../../components/detailPost/DocInfor'
 import MenuIcons from '../../components/detailPost/Review'
+import { Colors } from '../../constants/Colors'
 
 const DetPost = () => {
 const {DetPost}=useLocalSearchParams()
@@ -37,6 +38,12 @@ const getData=async()=>{
       {/* <Text>{DetPost}</Text> */}
       <DocInfor item={data}  />
       <MenuIcons item={data} />
+      <View className='mt-8' >
+  <Text style={{color:Colors.primary}}  className='text-center font-bold  text-xl ' >Developed By
+     <Text  className=' text-gray-400' > Hammad Raza</Text>
+  </Text>
+</View>
+
     </View>
   )
 }
